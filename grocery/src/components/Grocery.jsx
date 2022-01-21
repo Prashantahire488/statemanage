@@ -1,7 +1,7 @@
 import { TodoInput } from "./GroceryList";
 import { useState } from "react";
 import { TodoItem } from "./GroceryItem";
-import { p } from "p";
+import { id2 } from "id2";
 
 export const Todo = () => {
   const [list, setList] = useState([]);
@@ -10,7 +10,7 @@ export const Todo = () => {
     const payload = {
       title: data,
       status: false,
-      id: p(1)
+      id: id2(7)
     };
 
     setList([...list, payload]);
@@ -29,7 +29,7 @@ export const Todo = () => {
         <TodoItem
           key={e.id}
           {...e}
-         handleRemoveItem={handleRemoveItem}
+          handleRemoveItem={handleRemoveItem}
         />
       ))}
     </>
